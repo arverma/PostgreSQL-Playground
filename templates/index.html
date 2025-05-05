@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PostgreSQL Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CodeMirror -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.13/lib/codemirror.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.13/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.13/mode/sql/sql.min.js"></script>
+
+    <!-- SQL Formatter -->
+    <script src="https://cdn.jsdelivr.net/npm/sql-formatter@15.6.1/dist/sql-formatter.min.js"></script>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <main class="main-layout-container">
+      <div class="main-layout-row">
+        <!-- Left Column: Editor, Result -->
+        <div class="left-column">
+          <!-- SQL Editor -->
+          <section class="editor-card editor-scroll-wrapper">
+            <div class="editor-wrapper">
+              <textarea id="sqlEditor">// Your query here</textarea>
+            </div>
+
+            <div class="editor-actions">
+              <button class="run-btn" id="runBtn">▶ Run (⌘+⏎)</button>
+              <button class="format-btn" id="formatBtn">Format SQL</button>
+            </div>
+          </section>
+
+          <!-- Query Result -->
+          <div class="result-scroll">
+            <div
+              id="query-loading"
+              class="loading-indicator"
+              style="display: none"
+            >
+              ⏳ Running query...
+            </div>
+            <pre id="result" class="result-output"></pre>
+          </div>
+        </div>
+
+        <!-- Right Column: Tables -->
+        <aside class="sidebar-card">
+          <h2 class="sidebar-title">📦 Tables</h2>
+          <ul id="tableList" class="table-list"></ul>
+
+          <h2 class="sidebar-title">📜 History</h2>
+          <ul id="history-list"></ul>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Script at End -->
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </body>
+</html>
