@@ -76,7 +76,7 @@ docker-compose up --build
 ```
 
 Then open your browser and go to:  
-[http://localhost:5000](http://localhost:5000)
+[http://localhost:8080](http://localhost:8080)
 
 ---
 
@@ -118,5 +118,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-Created by **[Your Name]** – [@yourtwitter](https://twitter.com/yourtwitter)  
-Follow me on [GitHub](https://github.com/YOUR_GITHUB_USERNAME)
+Created by **[Aman Ranjan Verma]** – [Linkedin](https://www.linkedin.com/in/ar-verma/)
