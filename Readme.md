@@ -16,7 +16,7 @@ A web-based interactive playground to experiment with PostgreSQL queries in real
 
 ## 🖥️ Demo
 
-[![Demo Video](static/images/screenshot-youtube.png)](https://www.youtube.com/watch?v=HSmBthnsH0I)
+[![Demo Video](https://img.youtube.com/vi/HSmBthnsH0I/0.jpg)](https://www.youtube.com/watch?v=HSmBthnsH0I)
 
 Click the preview above to watch the demo on YouTube.
 
